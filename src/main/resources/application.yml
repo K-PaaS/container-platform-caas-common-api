@@ -1,0 +1,53 @@
+# Spring properties
+spring:
+  application:
+    name: PortalCommonApi  # Service registers under this name
+  security:
+    username:
+    password:
+
+# HTTP Server
+server:
+  port: ${PORT:3334}   # HTTP (Tomcat) port
+
+management:
+  security:
+    enabled: false
+
+
+---
+spring:
+  profiles: local
+datasource:
+  caas:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://
+    username:
+    password:
+jpa:
+  database: postgresql
+  show-sql: true
+  hibernate:
+    ddl-auto: none
+    naming:
+      strategy: org.hibernate.dialect.MySQL5Dialect
+  generate-ddl: false
+
+---
+spring:
+  profiles: dev
+
+datasource:
+  caas:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://
+    username:
+    password:
+jpa:
+  database: postgresql
+  show-sql: true
+  hibernate:
+    ddl-auto: none
+    naming:
+      strategy: org.hibernate.dialect.MySQL5Dialect
+  generate-ddl: false
