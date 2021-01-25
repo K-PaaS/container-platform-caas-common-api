@@ -21,9 +21,10 @@ repositories {
 ext {
     appGroup = 'org.paasta.caas.common.api'
     springIoPlatformVersion = 'Cairo-SR3'
-    mysqlConnectorJavaVersion = '8.0.22'
     lombokVersion = '1.18.2'
     jacocoVersion = '0.8.1'
+    mariadbClientVersion ='2.2.6'
+
 }
 
 dependencyManagement {
@@ -48,7 +49,7 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-jdbc"
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-    runtime "mysql:mysql-connector-java:${mysqlConnectorJavaVersion}"
+    compile("org.mariadb.jdbc:mariadb-java-client:${mariadbClientVersion}")
     testCompile "org.springframework.boot:spring-boot-starter-test"
 }
 

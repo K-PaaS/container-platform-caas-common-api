@@ -20,7 +20,7 @@ spring:
   profiles: local
 datasource:
   caas:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mysql://
     username:
     password:
@@ -39,7 +39,7 @@ spring:
 
 datasource:
   caas:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mysql://
     username:
     password:
