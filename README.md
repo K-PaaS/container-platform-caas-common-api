@@ -7,11 +7,11 @@
 
 ## 시작하기
 
-PaaS-TA 에서 제공하는 Container 서비스의 DB API 를 제공하는 서비스이다.
+PaaS-TA 에서 제공하는 컨테이너 서비스의 Database API를 제공합니다.
 
 ### 빌드 방법
 
-로컬 환경에서 빌드하고 싶을 때 다음 명령어를 입력합니다.
+PaaS-TA 컨테이너 서비스 COMMON API 소스 코드를 활용하여 로컬 환경에서 빌드가 필요한 경우 다음 명령어를 입력합니다.
 ```
 $ gradle build
 ```
@@ -25,7 +25,7 @@ $ gradle build
 | JDK                            | 8       |
 | Gradle                         | 4.4.1   |
 | Spring Boot                    | 2.0.4   |
-| Mysql Java Connector           | 8.0.11  |
+| MariaDB Java Client            | 2.2.6   |
 | Lombok                         | 1.18.2  |
 | Jacoco                         | 0.8.1   |
 
