@@ -87,7 +87,7 @@ public class UsersController {
     Users updateUserRoleByServiceInstanceIdAndOrganizationGuid(@PathVariable("serviceInstanceId") String serviceInstanceId,
                                                            @PathVariable("organizationGuid") String organizationGuid,
                                                            @RequestBody Users user){
-        return userService.updateUserRoleByServiceInstanceIdAndOrganizationGuid(user);
+        return userService.updateUserRoleByServiceInstanceIdAndOrganizationGuid(serviceInstanceId, organizationGuid, user);
     }
 
     /**

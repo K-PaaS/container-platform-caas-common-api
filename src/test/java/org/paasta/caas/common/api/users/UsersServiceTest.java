@@ -339,7 +339,7 @@ public class UsersServiceTest {
         when(commonService.setResultModel(gTestResultModel, RESULT_CODE_SUCCESS)).thenReturn(gTestFinalModel);
 
         // TEST
-        Users resultModel = userService.updateUserRoleByServiceInstanceIdAndOrganizationGuid(gTestModel);
+        Users resultModel = userService.updateUserRoleByServiceInstanceIdAndOrganizationGuid(SERVICE_INSTANCE_ID, ORGANIZATION_GUID, gTestModel);
 
         // VERIFY
         assertThat(resultModel).isNotNull();

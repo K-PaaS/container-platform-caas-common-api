@@ -89,8 +89,14 @@ public class UsersService {
      * @param user the user
      * @return the user
      */
-    Users updateUserRoleByServiceInstanceIdAndOrganizationGuid(Users user) {
-        return (Users) commonService.setResultModel(userRepository.save(user), Constants.RESULT_STATUS_SUCCESS);
+    Users updateUserRoleByServiceInstanceIdAndOrganizationGuid(String serviceInstanceId, String organizationGuid, Users user) {
+        String userId = user.getUserId();
+        Users users = (Users) commonService.setResultModel(userRepository.findByServiceInstanceIdAndOrganizationGuidAndUserId(serviceInstanceId, organizationGuid, userId), Constants.RESULT_STATUS_SUCCESS);
+        if(user.getRoleSetCode().equals(users.getRoleSetCode())) {
+            return (Users) commonService.setResultModel(userRepository.save(user), Constants.RESULT_STATUS_SUCCESS);
+        }else{
+            return (Users) commonService.setResultModel(userRepository.save(users), Constants.RESULT_STATUS_FAIL);
+        }
     }
 
     /**
