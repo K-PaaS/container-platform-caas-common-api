@@ -1,4 +1,4 @@
-package org.paasta.caas.common.api.adminToken;
+package org.caas.common.api.adminToken;
 
 import org.assertj.core.api.Assertions;
 import org.junit.After;
@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.paasta.caas.common.api.common.CommonService;
-import org.paasta.caas.common.api.common.Constants;
+import org.caas.common.api.common.CommonService;
+import org.caas.common.api.common.Constants;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;

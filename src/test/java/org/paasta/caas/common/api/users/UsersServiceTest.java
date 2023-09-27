@@ -1,4 +1,4 @@
-package org.paasta.caas.common.api.users;
+package org.caas.common.api.users;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -17,8 +17,8 @@ import org.junit.runners.MethodSorters;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.paasta.caas.common.api.common.CommonService;
-import org.paasta.caas.common.api.common.Constants;
+import org.caas.common.api.common.CommonService;
+import org.caas.common.api.common.Constants;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
